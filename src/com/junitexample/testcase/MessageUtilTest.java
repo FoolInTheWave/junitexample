@@ -8,12 +8,10 @@ import com.junitexample.utility.MessageUtil;
 
 public class MessageUtilTest {
 
-	@Test
+	@Test(expected = ArithmeticException.class)
 	public void testPrintMessage() {
 		String message = "Hello world!";
 		MessageUtil messageUtil = new MessageUtil(message);
-		
-		message = "Greetings world!";
 		
 		assertEquals(message, messageUtil.printMessage());
 	}
